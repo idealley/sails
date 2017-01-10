@@ -32,9 +32,23 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  // '/': {
-  //   view: 'homepage'
-  // }
+    '/': {
+      controller: 'PostController',
+      action: 'livechat'
+    },
+    'get /login': {
+        view: 'login'
+    },
+
+    'get /logout': {
+      controller: 'Auth',
+      action: 'logout'
+    },
+
+    '/api/info': {
+      controller: 'PostController',
+      action: 'index'
+    },
 
   /***************************************************************************
   *                                                                          *

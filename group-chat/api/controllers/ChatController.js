@@ -14,7 +14,7 @@ module.exports = {
                 sails.log(err);
                 sails.log("Error occurred in database operation");
             } else {
-                console.log('message: ', message)
+                //console.log('message: ', message)
                 Chat.publishCreate({id: message.id, message : message.message , user: message.user});
             }
         });
@@ -28,7 +28,7 @@ module.exports = {
                 sails.log(err);
                 sails.log("Error occurred in database operation");
             } else {
-                console.log('messages: ', messages)
+                //console.log('messages: ', messages)
                 res.send(messages);
             }
         });
